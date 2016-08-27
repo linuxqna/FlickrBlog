@@ -1,0 +1,87 @@
+/**
+ * Vertical navigation container
+ */
+.vertical {
+    position: fixed;
+    right: 5px;
+    bottom: 0;
+    width: 15px;
+    height: 100%;
+    z-index: 300;
+    display: table;
+    cursor: pointer;
+}
+
+/**
+ * Horizontal navigation container
+ */
+.horizontal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 300;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/**
+ * Navigations for both vertical and horizontal
+ */
+.navs {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.navs ul {
+    list-style: none;
+    width: 15px;
+    padding: 0;
+}
+
+.navs li {
+    list-style: none;
+    padding: 6px 0;
+    cursor: pointer;
+}
+
+.navs li::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.8;
+}
+
+.navs li.selected::after {
+    width: 14px;
+    height: 14px;
+    margin-left: -3px;
+    background-color: #ec008c;
+    opacity: 1;
+}
+
+.navs li:hover::after {
+    background-color: #ec008c;
+    opacity: 1;
+}
+
+/* Special for horizontal */
+.horizontal .navs ul {
+    width: 37px;
+}
+
+.horizontal .navs li {
+    display: inline-block;
+    padding: 6px 6px;
+}
+
+.horizontal .navs li.selected::after {
+    width: 8px;
+    height: 8px;
+    background-color: #ec008c;
+    opacity: 1;
+}

@@ -1,0 +1,53 @@
+.main {
+    position: absolute;
+    font: 12px "Helvetica Neue","Open Sans",sans-serif;
+}
+/**
+ * Slide container
+ * It has all background photos
+ */
+.slide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-size: cover;
+    background-color: #212124;
+    background-attachment: scroll;
+    transition: height 0.7s ease-in-out;
+}
+.slide.active {
+    height: 100%;
+}
+
+/**
+ * Title container
+ * which belongs to each slide
+ */
+.titleContainer {
+    position: fixed;
+    right: 0;
+    bottom: 30px;
+    opacity: 0;
+    width: 30%;
+    min-width: 350px;
+    height: 50px;
+    z-index: 501;
+    background-color: rgba(211, 211, 211, 0.7);
+    cursor: pointer;
+    transition: opacity 1s ease-in-out, right 0.5s ease-in-out;
+    white-space: nowrap;
+}
+.titleContainer.active {
+    opacity: 1;
+}
+.titleContainer.showContent {
+    right: 50%;
+}
+
+.title {
+    font-size: 25px;
+    color: #333;
+    padding: 0 40px;
+}

@@ -1,0 +1,18 @@
+{
+    "server": {
+        "protocol": "http",
+        "host": "jwseo.com:3000"
+    },
+    "menu": {
+        "Home": "blog",
+        "Family": "family",
+        "Photography": "photography",
+        "About Me": "aboutme"
+    },
+    "flickr": {
+        "key": "YOUR KEY",
+        "secret": "YOUR SECRET",
+        "callback": "/handle_flickr_callback",
+        "owner_nsid": "49182479@N00"
+    }
+}
